@@ -1,0 +1,348 @@
+# EXAM FOR WEEK 6
+
+## KEEP IN MIND: YOU ARE DOING THIS FOR YOUR BRIGHT FUTURE, SO GIVE YOUR 120%!
+## ПОМНИТЕ: ВЫ ДЕЛАЕТЕ ЭТО ДЛЯ СВОЕГО СВЕТЛОГО БУДУЩЕГО, ПОЭТОМУ ВЫКЛАДЫВАЙТЕСЬ НА ВСЕ СВОИ 120%!
+
+## RULES:
+> No interner, no help to each other!
+
+> Make one file and place all your work there (e.g. odina_kholiqov.py)
+
+> Send the file at 
+
+> You have 2 hours only
+
+only 2 hours 
+
+### 1 Question
+What is OOP and why is it important? Write about main principles of OOP.
+Чиро ООП мегуянд ва барои чӣ он лозим аст? Дар бораи принсипҳои асосии он нависед.
+Oop yake az paradigmahoi barnomasozi meboshad ki az prinsiphoi zarin iborat ast.
+1.Inheritence-yane naslodovanie merosgiri childclass metavonad az parent class merod girad
+2.Incapsulation-bo istifoda kardani in prinsip metavonem dastrasi paydo kardan ba dannihoi khdmona idora knem
+Incapsulation dar khud 3 modificator dorad
+Public,Private,Protect  
+Public-publichniy dar hama jo dastrass ast
+Private daruni klass va berun az on dastras ast
+Protect-tanho dar child class dastrass ast
+
+
+
+3.Polimorphism-bo istifoda az in mo metavonem yak metodro bo yak nom dar chand joy istifoda knem
+
+4. Abstraksiya-in 4 principi OOP
+
+
+### 2 Question
+What are getter and setter and how to use them? Write about properties in python.
+Getter ва setter чист ва чӣ тавр онҳоро истифода мебарем? Дар бораи хусусиятҳо(properties) дар python нависед.
+Getter va setter metodhoe meboshand koi baroi dastrasi idora  kardani attributhoi klassamon istifoda
+mekunem dostup paydo kardan ba attributhoi mo meboshand.
+Getter-baroi giriftani Znacheniyayi attributmon istifogda  meshavad
+Setter -baroi mondani znacheniya ba atributamon meboshad 
+Har dushon bo attributhoi Privatni kor mekunand 
+Dar istifodai getter va setter mo propertiro ham istifoda mekunaem in ham dastrasi
+ paydo kardan ba attributamon be istifoda kardani nomi metod istifoda mekunem
+
+properties-bo baroi kombinatsiya kardani gettero va setterho istifoda mekunem.
+
+
+### 3 Question
+Types of variables and methods in a class.
+Кадом намуди атрибутҳо ва методҳо дар клас мавҷуданд. 
+Dar Class Mavjudand:
+instance variable
+instance method
+local variable
+Global-varriable
+Class-method
+Static method
+class-varriable
+
+
+
+### 4 Question
+Write about constructor and destructor.
+Дар бораи конструктор ва деструктор нависед.
+Konstruktor baroi sokhtani obekti klass istifoda meshavvad
+__init__
+__new_
+__init__ -attributhoi mora inisialize mekunad
+
+
+### 5 Question
+Difference between global, local and nonlocal variables.
+Фарқият байни тағйирёбандаҳои global, local and nonlocal.
+Global-tagiryobandaho berun funksiya sokhta meshavand va mo metavonem da hamajao istifoda baremshona
+Local boshand-Daruni funksiya mesozemsha va faqat daruni funksiya Dostupni meboshand 
+Nonlokal-az keywordi nonlocal istifoda kada vayora daruni vlozhi funksiyaho istifoda mekunem bo yori az inho 
+metavonem tagiryobandahoi az berun budara ne localni kada znacheniyahosha alish knem
+
+### 1 
+Create a program that asks the user for a range of numbers (x, y) and displays the multiplication tables from x to y.
+Барномае созед ки аз консол 2 рақамро қабул мекунад. Барои ҳар як адади дар ин давр вуҷуддошта ҷадвали зарбашро нишон диҳад.
+### EXAMPLE
+# INPUT
+    From = 2
+    To = 3
+# OUTPUT
+    2x1= 2
+    2x2= 4
+    2x3= 6
+    2x4= 8
+    2x5= 10
+    2x6= 12
+    2x7= 14
+    2x8= 16
+    2x9= 18
+    2x10= 20
+    
+    3x1= 3
+    3x2= 6
+    3x3= 9
+    3x4= 12
+    3x5= 15
+    3x6= 18
+    3x7= 21
+    3x8= 24
+    3x9= 27
+    3x10= 30
+
+___________________________
+x=int(input())
+y=int(input())
+for i in range(x, y + 1):
+          
+        for j in range(1, 11):
+            print(f"{i} * {j} = {i*j}")
+        
+        print("-*-*" * 10)
+
+
+
+
+### 2
+Create a class of Circle with instance variable like radius and class variable like PI(3.14). Then create a constructor which initializes the radius(radius comes as a parameter of constructor).
+Your class should have the following methods:
+Як класи Circle ки аз як тағйирёбандаи ба клас таалуқдошта PI = 3.14 ва як тағйирёбандаи ба обект тааллуқдошта radius ки қиммати он аз конструктор гузошта мешавад созед. Класи Шумо аз методҳои зерин бояд иборат бошад:
+
+1. get_area();               // area = 2 * PI * R * R
+2. get_diametr();           // diameter = 2 * R
+3. get_circumference();      //  circumference  = 2 * PI * R
+4. get_radius();             // radius  = R
+
+
+___________________________
+
+class Circle:
+    PI = 3.14 
+
+    def __init__(self, radius):
+        self.radius = radius
+
+    def get_area(self):
+        
+        return 2 * Circle.PI * self.radius * self.radius
+
+    def get_diameter(self):
+   
+        return 2 * self.radius
+
+    def get_circumference(self):
+  
+        return 2 * Circle.PI * self.radius
+
+    def get_radius(self):
+        
+        return self.radius
+
+circle = Circle(5)
+print("Masohat = ", circle.get_area())
+print("Diametr = ", circle.get_diameter())
+print("Darozi = ", circle.get_circumference())
+print("Radius = ", circle.get_radius())
+
+_________________________
+
+
+### 3
+Create a Calculator class with this static methods:
+Класи Калкуляторро бо методҳои статикии зерин созед:
+1. factorial(n)
+2. power(a, b)
+3. sqrt(n)
+
+class Calculator:
+    @staticmethod
+    def factorial(n):        
+        if n < 0:
+            return "Factorial vujud nadorad"
+        elif n == 0:
+            return 1
+        else:
+            result = 1
+            for i in range(1, n + 1):
+                result *= i
+            return result
+
+    @staticmethod
+    def power(a, b):      
+        return a ** b
+
+    @staticmethod
+    def sqrt(n):        
+            return n ** 0.5
+
+
+print(f"Factorial: {Calculator.factorial(5)}")
+print(f"Daraja:{Calculator.power(2, 3)}")
+print(f"Resha az adadamon: {Calculator.sqrt(16)}")
+
+_________________________
+
+
+### 4
+Write a program in Python that asks the user for two numbers and one operation (+, -, *, /) then calculate the operation and display the result on the screen.
+You should to follow this steps:
+Як класи Calculator созед ки дар конструктор атрибутҳои зеринро дорост. Рақами якум, амал(+, -, *, /) ва рақами дуюм. Калкулятори Шумо баяд 4 амали математикиро иҷро кунад. Берун аз клас як даври беохир(infinite loop) созед. Объекти класи Калкуляторро созед ва рақамҳо ва аломати дохил кардаатонро ба он гузоред. math case - ро барои  даъват кардани методиҳои клас вобаста ба аломати дохилкарда истифода баред.
+
+1.	Create class Calculator 
+2.	Create a constructor which initializes the first number, operation(+, -, *, /) and second number(first num, second num, operation comes as parameter of constructor).
+3.	Create four instance methods like: 
+    Sum()
+    Subtract()
+    Multiplication()
+    Division()
+4.	Create infinite loop outside Calculator class 
+5.	Use the math case block for calling methods
+### EXAMPLE
+# input 
+    The first number is: 3
+    The operation is: +
+    The second number is: 1
+# output
+    3 + 1 = 4
+
+class Calculator:
+    def __init__(self, first_num, second_num, operation):
+        self.first_num = first_num
+        self.second_num = second_num
+        self.operation = operation
+
+    def summa(self):
+        return self.first_num + self.second_num
+
+    def subtract(self):
+        return self.first_num - self.second_num
+
+    def multi(self):
+        return self.first_num * self.second_num
+
+    def division(self):
+        if self.second_num == 0:
+            # return "Error: Division by zero."
+            return self.first_num / self.second_num
+
+
+while True:
+
+    first_number = int(input("The first number is: "))
+    operation = input("The operation is: ")
+    second_number = int(input("The second number is: "))
+
+    calc = Calculator(first_number, second_number, operation)
+    match operation:
+        case '+':
+            print(f"{first_number} + {second_number} = {calc.summa()}")
+        case '-':
+            print(f"{first_number} - {second_number} = {calc.subtract()}")
+        case '*':
+            print(f"{first_number} * {second_number} = {calc.multi()}")
+        case '/':
+            print(f"{first_number} / {second_number} = {calc.division()}")    
+
+
+  _______________________
+
+
+
+### 5 Question
+Write an access control in PYTHON that asks the user for the username and password. Both must be integers from user.
+You should to follow this steps:
+1. Create a User class with attributes like First name, Last name, Username and Password. All atributes should init from constructor(__init__).
+2. Create a UserManager class with this methods:
+    register() -> in this method you should create object of User, input user information from console and append to list_of_users.
+    
+    login() -> this method should to check if user login and password both correct should print Login successful! or this user is not to list_of_user print User with this username not found and password incorrect print Password incorrect.
+    
+    change_password() -> this method for changing password by username, old_password and new_password
+	
+    GetUser() -> get all users from list_of_users
+
+Як барнома созед ки вазифаҳои зеринро иҷро кунад. Регирстратсия, логин, ивази парол, истифодабарандагон.
+Барои ҳалли ин масъала класи User бо атрибутҳои First name, Last name, Username ва Password созед. Ҳамаи атрибутҳо аз конструктор ворид карда шаванд. Класи дигар ки бояд созед ин UserManager ки аз методҳои register(), login(), change_password() ва GetUser() иборат аст.
+    register() -> дар ин метод обекти класи User - ро созед маълумотҳояшро аз консол дохил карда онро ба листи  list_of_users дохил кунед. 
+
+    login() -> дар ин метод бошад санҷед агар истифодабар бо ҳамин логир ва парол дар list_of_users бошад дар консол  Login successful! - ро нишон диҳед ва агар набошад User with this username not found, ё паролаш нодуруст бошад     Password incorrect!
+    
+    change_password() -> дар ин метод истифодабар метавонад бо дохил кардани username, old_password ва new_password паролашро иваз кунад.
+	
+    GetUser() -> ин метод бошад бо як формати хуб ҳамаи маълумотҳои истидабаронро дар консол нишон диҳад.
+
+class User:
+    def __init__(self, first_name, last_name, username, password):
+        self.first_name = first_name
+        self.last_name = last_name
+        self.username = username
+        self.password = password
+
+class UserManager:
+    list_of_users = []
+
+    
+    def register():
+        first_name = input("Enter first name: ")
+        last_name = input("Enter last name: ")
+        username = input("Enter username : ")
+        password = int(input("Enter password (integer): "))
+        new_user = User(first_name, last_name, username, password)
+        UserManager.list_of_users.append(new_user)
+        print("Registration successful!")
+
+    
+    def login():
+        username = input("Enter username:")
+        password = int(input("Enter password (integer): "))
+        for user in UserManager.list_of_users:
+            if user.username == username:
+                if user.password == password:
+                    print("Login successful!")
+                    return
+                else:
+                    print("Password incorrect.")
+                    return
+        print("User with this username not found.")
+
+    
+    def change_password():
+        username = input("Enter username: ")
+        old_password = int(input("Enter old password (integer): "))
+        new_password = int(input("Enter new password (integer): "))
+        for user in UserManager.list_of_users:
+            if user.username == username and user.password == old_password:
+                user.password = new_password
+                print("Password changed successfully!")
+                return
+        print("Username or old password is incorrect.")
+
+    
+    def get_users():
+        return UserManager.list_of_users
+
+
+UserManager.register()
+UserManager.login()
+UserManager.change_password()
+users = UserManager.get_users()
+for user in users:
+    print(f"User: {user.first_name} {user.last_name}, Username: {user.username}")
